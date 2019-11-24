@@ -70,7 +70,7 @@ namespace ElectiPopuli
 
                 foreach (var person in this.AllMembers)
                 {
-                    var candidates = this.AllMembers.Except(person.DirectFamily.AllMembers)
+                    var candidates = this.AllMembers.Except(person.DirectFamily.DirectMembers)
                                                     .Except(pairings.Values)
                                                     .ToList();
 
